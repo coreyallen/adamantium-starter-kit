@@ -24,11 +24,6 @@
 	// ADAMANTIUM CORE
 	/* Do not delete this line! */
 	require (TEMPLATEPATH . '/includes/adamantium.php');
-
-
-	// EXTRA OPTIONS FROM THEME OPTIONS
-	/* If you are not using Custom Post Types can comment this line */
-	require (TEMPLATEPATH . '/includes/extra-options-theme.php');
 	
 
 	// CUSTOM POST TYPES
@@ -54,8 +49,6 @@
 	// EXTRA
 	/* All that considered as an extra or utility that is external to WordPress and not default, you should put in the "Extra" Folder */
 	require (TEMPLATEPATH . '/includes/extra/content-limit.php');
-	require (TEMPLATEPATH . '/includes/extra/custom-columns.php');
-	require (TEMPLATEPATH . '/includes/extra/security.php');
 
 
 	// METABOXES
@@ -75,17 +68,21 @@
 		if ( !is_admin() ) { // this if statement will insure the following code only gets added to your wp site and not the admin page cause your code has no business in the admin page right unless that's your intentions
 
     		/* STYLES */
-			// register main stylesheet
+			// Main stylesheet
     		wp_register_style ('adamantium-stylesheet', get_stylesheet_directory_uri() . '/style.css', array(), '', 'all' );
     		wp_enqueue_style ('adamantium-stylesheet');
 
-    		// ie-only style sheet
+    		// IE-only stylesheet
     		wp_register_style ('adamantium-ie-stylesheet', get_stylesheet_directory_uri() . '/css/ie.css', array(), '');
     		wp_enqueue_style ('adamantium-ie-stylesheet');
 
+    		// Normalize stylesheet
+    		wp_register_style ('normalize-stylesheet', get_stylesheet_directory_uri() . '/css/normalize.css', array(), '');
+    		wp_enqueue_style ('normalize-stylesheet');
+
 
     		/* SCRIPTS */
-    		// register Custom Scripts
+    		// Custom Scripts
 			wp_register_script ('custom-scripts', THEME_DIR . '/js/scripts.js', array( 'jquery' ), '1', false );
 			wp_enqueue_script ('custom-scripts');
 
@@ -97,12 +94,10 @@
 	}
 	add_action( 'wp_enqueue_scripts', 'adamantium_scripts_and_styles', 999)
 
-
 /***************************************************************************************/
-
-/*
-	If you want to add new things, do it from here to keep order
-*/
-
-
+?>
+<?php 
+	/*
+		If you want to add new things, do it from here to keep order
+	*/
 ?>

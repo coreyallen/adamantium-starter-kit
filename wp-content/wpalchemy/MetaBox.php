@@ -1370,7 +1370,7 @@ class WPAlchemy_MetaBox
 
 				var the_name = $(this).attr('class').match(/docopy-([a-zA-Z0-9_-]*)/i)[1];
 
-				var the_group = $('.wpa_group-'+ the_name +':first.tocopy', p);
+				var the_group = $('.wpa_group-'+ the_name +'.tocopy:first', p);
 				
 				var the_clone = the_group.clone().removeClass('tocopy last');
 
