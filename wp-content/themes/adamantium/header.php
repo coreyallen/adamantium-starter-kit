@@ -58,5 +58,5 @@
 	
 	<!-- Example of Primary Menu:
 	<div id="primary-menu">
-		<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'fallback_cb' => 'fallback_no_menu' ) ); ?>
+		<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'fallback_cb' => 'adamantium_fallback_no_menu' ) ); ?>
 	</div> -->
