@@ -192,6 +192,14 @@
 	      break;
 	  }
 	}
+	
+	
+	
+	// Fallback no menu
+	function adamantium_fallback_no_menu() {
+	    $menu = '<div class="menu-header"><ul class="menu"><li class="menu-item menu-item-type-post_type"><a href="'.get_bloginfo('url').'/wp-admin/nav-menus.php">Por favor, configure el menu lateral</a></li></ul></div>';
+	    echo $menu;
+	}
 
 
 
